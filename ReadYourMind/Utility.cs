@@ -47,7 +47,6 @@ namespace ReadYourMind
 
             };
             int indexChoose = GetRandomNumber(0, arrList.GetUpperBound (0));
-          //  indexChoose = 0;
             List<int> listResult = new List<int>();
             int i;
             for (i = 0; i <= arrList.GetUpperBound(1); i++)
@@ -55,7 +54,7 @@ namespace ReadYourMind
                 listResult.Add(arrList[indexChoose, i]);
             }
             return listResult;
-            //arrList[0, 2] = 5;
+
 
         }
        
