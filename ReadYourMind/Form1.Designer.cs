@@ -31,18 +31,19 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlMessage = new System.Windows.Forms.Panel();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.picCardAnswer = new System.Windows.Forms.PictureBox();
             this.btnYes = new System.Windows.Forms.Button();
             this.btnNo = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblExplain2 = new System.Windows.Forms.Label();
-            this.picCardAnswer = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMessage.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCardAnswer)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +76,14 @@
             this.lblMessage.TabIndex = 7;
             this.lblMessage.Text = "I am going to read your mind";
             // 
+            // picCardAnswer
+            // 
+            this.picCardAnswer.Location = new System.Drawing.Point(22, 92);
+            this.picCardAnswer.Name = "picCardAnswer";
+            this.picCardAnswer.Size = new System.Drawing.Size(72, 96);
+            this.picCardAnswer.TabIndex = 5;
+            this.picCardAnswer.TabStop = false;
+            // 
             // btnYes
             // 
             this.btnYes.Location = new System.Drawing.Point(12, 592);
@@ -100,7 +109,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newGameToolStripMenuItem});
+            this.newGameToolStripMenuItem,
+            this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1096, 24);
@@ -117,19 +127,19 @@
             this.newGameToolStripMenuItem.Text = "Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(132, 22);
             this.toolStripMenuItem2.Text = "New Game";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // lblExplain2
             // 
@@ -141,15 +151,6 @@
             this.lblExplain2.TabIndex = 10;
             this.lblExplain2.Text = "If you see your card belong to here click Yes, if not click No.";
             // 
-            // picCardAnswer
-            // 
-            //this.picCardAnswer.Image = global::ReadYourMind.Properties.Resources.BackCard;
-            this.picCardAnswer.Location = new System.Drawing.Point(22, 92);
-            this.picCardAnswer.Name = "picCardAnswer";
-            this.picCardAnswer.Size = new System.Drawing.Size(72, 96);
-            this.picCardAnswer.TabIndex = 5;
-            this.picCardAnswer.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -158,6 +159,13 @@
             this.pictureBox1.Size = new System.Drawing.Size(1096, 454);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -174,14 +182,15 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Read Your Mind";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlMessage.ResumeLayout(false);
             this.pnlMessage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCardAnswer)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCardAnswer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,6 +210,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.Label lblExplain2;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 

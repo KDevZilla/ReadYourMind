@@ -324,5 +324,12 @@ namespace ReadYourMind
             game.NewGame();
             UpdateRender();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAbout f = new FormAbout();
+            f.ShowDialog();
+
+        }
     }
 }
