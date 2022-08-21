@@ -9,6 +9,13 @@ namespace ReadYourMind
     public class Game
     {
         List<Set> list = new List<Set>();
+        public enum GameState
+        {
+            ShowAllCard,
+            ShowSet,
+            ShowAnswer
+        }
+        public  GameState State { get;private set; }
         public Game()
         {
             /*
@@ -40,8 +47,15 @@ namespace ReadYourMind
         {
             get { return _ReadMindNumber; }
         }
-
-        private void CalReadMineNumber()
+        public Boolean IsUserActuallyChooseaCard
+        {
+            get
+            {
+                return _ReadMindNumber > 0 &&
+                    _ReadMindNumber < 53;
+            }
+        }
+        public void CalReadMineNumber()
         {
             int iCount = 0;
             int iSum = 0;
@@ -57,9 +71,10 @@ namespace ReadYourMind
         public Boolean IsGameFinished { get; private set; } = false;
       
         List<int> ListOrderShow = null;
-        public Boolean IsThereAnyotherCardLeft
+
+        public Boolean IsThisTheLastSet
         {
-            get { return CurrentSetNumber < 5; }
+            get { return CurrentSetNumber == 5; }
         }
         public int CurrentSetNumber { get; private set; }
         public void NewGame()
@@ -70,14 +85,30 @@ namespace ReadYourMind
             }
             ListOrderShow = Utility.GetUniqueOrderFor0To5();
             CurrentSetNumber = 0;
+            this.State = GameState.ShowAllCard ;
+            
+
             //CurrentSet = list[ListOrderShow[CurrentSetNumber]];
         }
+        public void ShowAllCard()
+        {
+            this.State = GameState.ShowAllCard ;
+            
 
+        }
+        public void ShowFirstSet()
+        {
+            this.State = GameState.ShowSet;
+            CurrentSetNumber = 0;
+
+        }
         public Set CurrentSet { get =>list[ListOrderShow[CurrentSetNumber]] ;}
         public void Next()
         {
+            
             if(CurrentSetNumber >= 5)
             {
+                this.State = GameState.ShowAnswer;
                 return;
             }
             CurrentSetNumber++;
