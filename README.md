@@ -11,7 +11,7 @@ This program can read your mind!!
 2. Don't tell anyone which card you have chosen.
 3. Program will show you 6 of set of cards.
 4. If the card you have chosen appeared on the set, please click Yes button, if not click No button.
-5. After you have finished click on 6th set, program will reveal your chosen car.
+5. After you have finished clicking on the 6th set, program will reveal your chosen card.
 
 
 # How to setup a project
