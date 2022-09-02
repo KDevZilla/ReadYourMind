@@ -7,10 +7,11 @@ This program can read your mind!!
 # How to Play
 
 
-1. Pic one of the card from 52 cards in deck.
+1. Choose one of the card from 52 cards in deck.
+     Just keep it in your mind, no need to click anything yet.
 2. Don't tell anyone which card you have chosen.
 3. Program will show you 6 of set of cards.
-4. If the card you have chosen appeared on the set, please click Yes button, if not click No button.
+4. If the card you have chosen appeared on the set, please click Yes button, if it does not, click No button.
 5. After you have finished clicking on the 6th set, program will reveal your chosen card.
 
 
